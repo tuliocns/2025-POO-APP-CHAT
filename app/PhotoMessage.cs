@@ -1,25 +1,28 @@
-public class MediaMessage   : MessageBase
+// Classe base para mensagens que contêm mídia (foto, vídeo, arquivo)
+public class MediaMessage : MessageBase
 {
-    public string File { get; set; }
-
-    public string Format { get; set; }
+    public string FileName { get; set; }  // Caminho ou nome do arquivo
+    public string Format { get; set; }    // Ex: .jpg, .mp4, .pdf
 
     public MediaMessage(string message) : base(message) { }
 }
 
+// Mensagem de vídeo, inclui duração
 public class VideoMessage : MediaMessage
 {
-    public VideoMessage(string message) : base(message) { }
+    public int Duration { get; set; } // Duração em segundos
 
-    public int Duration { get; set; } 
+    public VideoMessage(string message) : base(message) { }
 }
 
+// Mensagem de foto
 public class PhotoMessage : MediaMessage
 {
-public PhotoMessage(string message) : base(message) { }
+    public PhotoMessage(string message) : base(message) { }
 }
 
+// Mensagem de arquivo (documentos, planilhas, etc.)
 public class FileMessage : MediaMessage
 {
-public FileMessage(string message) : base(message) { }
+    public FileMessage(string message) : base(message) { }
 }

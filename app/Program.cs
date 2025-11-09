@@ -8,7 +8,7 @@ Console.WriteLine("3. Instagram");
 Console.WriteLine("4. Facebook");
 
 int canal = 0;
-string resposta = Console.ReadLine();
+string? resposta = Console.ReadLine();
 if (!int.TryParse(resposta, out canal))
 {
     Console.WriteLine("Opção inválida");
@@ -17,7 +17,7 @@ if (!int.TryParse(resposta, out canal))
 
 // Criando mensagens de exemplo
 TextMessage messageBase = new TextMessage("Olá! Esta é uma mensagem de teste.");
-VideoMessage video = new VideoMessage("Olá! Este é um vídeo de teste.");
+VideoMessage video = new VideoMessage("video_teste.mp4", "mp4", 120);
 
 // Escolhendo o canal e enviando
 if (canal == 1)

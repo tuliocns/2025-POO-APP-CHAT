@@ -1,9 +1,9 @@
-using System.Drawing;
-
-public class TextMessage : MessageBase
+public class TextMessage
 {
-    public TextMessage(string message):base(message)
+    public string Conteudo { get; set; }
+
+    public TextMessage(string conteudo)
     {
-        
+        Conteudo = conteudo;
     }
 }

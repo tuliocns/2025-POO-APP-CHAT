@@ -1,9 +1,9 @@
-public class PhotoMessage
+public class FileMessage
 {
     public string Arquivo { get; set; }
     public string Formato { get; set; }
 
-    public PhotoMessage(string arquivo, string formato)
+    public FileMessage(string arquivo, string formato)
     {
         Arquivo = arquivo;
         Formato = formato;

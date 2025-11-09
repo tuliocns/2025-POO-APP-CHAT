@@ -32,4 +32,18 @@ public class Telegram
 
     public void EnviarMensagem(string username, PhotoMessage message)
     {
-        Console.WriteLine($"[Telegram] Enviando foto para o usuário @{username} (arquivo: {message.Arq
+        Console.WriteLine($"[Telegr1am] Enviando foto para o usuário @{username} (arquivo: {message.Arquivo}, formato: {message.Formato})");
+    }
+
+    // Envio de ARQUIVO
+    public void EnviarMensagem(long numero, FileMessage message)
+    {
+        Console.WriteLine($"[Telegram] Enviando arquivo para o número {numero} (arquivo: {message.Arquivo}, formato: {message.Formato})");
+    }
+
+    public void EnviarMensagem(string username, FileMessage message)
+    {
+        Console.WriteLine($"[Telegram] Enviando arquivo para o usuário @{username} (arquivo: {message.Arquivo}, formato: {message.Formato})");
+    }
+}
+
